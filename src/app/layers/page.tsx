@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { LayerList } from "@/components/server/layer_list";
 import { loadSourceData } from "@/utils/load_source_data";
+import { PROJECT_TITLE } from "@/utils/variables";
+
+export const metadata: Metadata = {
+  title: `Layers - ${PROJECT_TITLE}`,
+};
 
 export default async function Layers() {
   const sourceData = await loadSourceData();

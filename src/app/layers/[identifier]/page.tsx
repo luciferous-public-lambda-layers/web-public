@@ -1,8 +1,10 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { ClipboardIcon } from "@/components/client/clipboard_icon";
 import { InformationIcon } from "@/components/client/information_icon";
 import { loadSourceData } from "@/utils/load_source_data";
+import { PROJECT_TITLE } from "@/utils/variables";
 
 type Parameters = {
   identifier: string;
@@ -19,6 +21,13 @@ export async function generateStaticParams(): Promise<Parameters[]> {
       identifier: identifier,
     };
   });
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { identifier } = await params;
+  return {
+    title: `${identifier} - Layers - ${PROJECT_TITLE}`,
+  };
 }
 
 export default async function LayerInfo({ params }: Props) {

@@ -67,10 +67,8 @@ export default async function RootLayout({
             <aside className="menu">
               <ul className="menu-list">
                 <li>
-                  <Link href="/about">About</Link>
+                  <Link href="/">Home</Link>
                 </li>
-              </ul>
-              <ul className="menu-list">
                 <li>
                   <Link href="/layers">Layers</Link>
                   <ul>{items}</ul>
@@ -79,7 +77,7 @@ export default async function RootLayout({
             </aside>
           </div>
           <div className="column">
-            <div className="container is-fluid pt-5 pb-5">{children}</div>
+            <div className="container pt-5 pb-5">{children}</div>
           </div>
         </div>
       </body>
