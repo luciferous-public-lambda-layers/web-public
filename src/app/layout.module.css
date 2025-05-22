@@ -1,0 +1,11 @@
+.html {
+    height: 100vh;
+}
+
+.FullHeight {
+    min-height: 100%;
+}
+
+.RightLine {
+    border-right: 5px solid gray;
+}
